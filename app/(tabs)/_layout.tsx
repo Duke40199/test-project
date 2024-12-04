@@ -18,6 +18,7 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
+
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
@@ -26,6 +27,13 @@ export default function TabLayout() {
           default: {},
         }),
       }}>
+      <Tabs.Screen
+        name="test-new-tab"
+        options={{
+          title: 'Test new tab',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
       <Tabs.Screen
         name="index"
         options={{
